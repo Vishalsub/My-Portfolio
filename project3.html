@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management Robot</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+            background-color: #f8f9fa;
+        }
+
+        #background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: -1;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            color: white;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+        }
+
+        .main-content {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #0056b3;
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+
+        p, ul {
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .media-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .media-image, .media-video {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #comments {
+            margin-top: 30px;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        input, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        button {
+            background-color: #00cccc;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #00cccc;
+        }
+
+        #comment-list li {
+            margin-bottom: 10px;
+        }
+
+        .back-button {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .back-button a {
+            text-decoration: none;
+            color: white;
+            background-color: #00cccc;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        .back-button a:hover {
+            background-color: #00cccc;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #00cccc;
+            color: white;
+            position: relative;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Video Background -->
+    <!-- <video id="background-video" autoplay muted loop playsinline>
+        <source src="images/1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video> -->
+
+    <!-- Overlay -->
+    <div class="overlay"></div>
+
+    <!-- Header Section -->
+    <header>
+        <h1>VR-Based Virtual Laboratory Device</h1>
+        <p>Aug 25 2022 | Associated with Sri Krishna College of Engineering and Technology</p>
+    </header>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Back to Projects Page -->
+        <div class="back-button">
+            <a href="projects.html">← Back to Projects Page</a>
+        </div>
+
+<!-- Introduction -->
+<section id="introduction">
+    <h2>Introduction</h2>
+    <p>
+        In August 2022, our team traveled to Noida for the grand finale of the Smart India Hackathon (SIH) 2022, held at Galgotias University. We were tasked with solving the problem statement: "To build a virtual laboratory system for school students." After five intense days of brainstorming and hard work, we developed a VR and AR-based solution aimed at revolutionizing education for students.
+    </p>
+    <p>
+        Our system allows students to experience real-time, interactive laboratory environments from the comfort of their homes or classrooms, helping bridge the gap in practical learning. With cutting-edge technology, we built a solution that made learning engaging and hands-on through virtual and augmented reality.
+    </p>
+</section>
+
+<!-- Key Features -->
+<section id="features">
+    <h2>Key Features</h2>
+    <ul>
+        <li>VR Headset and Haptic Glove Controller: Custom-built hardware to create a more immersive experience for students.</li>
+        <li>3D Virtual Laboratories: Three detailed 3D models of instruments and machines for various science experiments.</li>
+        <li>Personal Lab Assistant: In-built assistant to guide students through experiments and provide real-time feedback.</li>
+        <li>Progress Tracking Tablet: A personalized tablet interface for students to track their learning progress.</li>
+        <li>Wake Word and Speech Recognition: Voice-activated control for hands-free interaction within the virtual lab.</li>
+        <li>AR Hand and Finger Tracking: Augmented reality-based tracking for more interactive engagement with virtual objects.</li>
+    </ul>
+</section>
+
+<!-- Benefits -->
+<section id="benefits">
+    <h2>Benefits</h2>
+    <ul>
+        <li>Improves student engagement by providing a hands-on, immersive learning experience.</li>
+        <li>Reduces barriers to practical learning by enabling students to perform virtual experiments safely and effectively.</li>
+        <li>Helps in understanding complex scientific concepts by visualizing and interacting with 3D models of lab instruments and machines.</li>
+        <li>Enhances accessibility for students in remote or under-resourced areas who may not have access to physical laboratories.</li>
+    </ul>
+</section>
+
+<!-- Skills -->
+<section id="skills">
+    <h2>Skills</h2>
+    <ul>
+        <li>VR/AR Development</li>
+        <li>3D Modeling and Simulation</li>
+        <li>Hardware Design (VR Headset and Haptic Glove)</li>
+        <li>Speech Recognition and Wake Word Detection</li>
+        <li>Unity Software and Blender</li>
+        <li>Mentorship and Team Collaboration</li>
+    </ul>
+</section>
+
+<!-- Media Section -->
+<section id="media">
+    <h2>Media</h2>
+    <div class="media-content">
+        <img src="projects/Chemistry lab.png" alt="Virtual Laboratory System" class="media-image">
+        <video controls class="media-video">
+            <source src="projects/haptic gloves test.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</section>
+
+<!-- Credits Section -->
+<section id="credits">
+    <h2>Credits</h2>
+    <p>
+        We would like to thank everyone who supported us throughout this journey:
+    </p>
+    <ul>
+        <li><strong>Mr. Vignesh T</strong> - Our dedicated mentor who guided us through every stage of the hackathon.</li>
+        <li><strong>Mr. Vignesh Ramkumar</strong> - Our industrial mentor for suggesting innovative improvements and ideas that elevated our solution.</li>
+        <li><strong>Galgotias University</strong> - For hosting the event and recognizing our efforts with the Special Category Award.</li>
+        <li><strong>Smart India Hackathon</strong> - For organizing an incredible platform that allowed us to showcase our talents and ideas.</li>
+    </ul>
+</section>
+
+
+        <!-- Comment Section -->
+        <section id="comments">
+            <h2>Comments</h2>
+            <form id="comment-form">
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <textarea id="comment" name="comment" rows="5" placeholder="Write your comment here..." required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+            <ul id="comment-list">
+            </ul>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>© 2025 Vishal Subramanian. All rights reserved.</p>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        document.getElementById('comment-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value.trim();
+            const comment = document.getElementById('comment').value.trim();
+            if (name && comment) {
+                const li = document.createElement('li');
+                li.innerHTML = `<strong>${name}:</strong> ${comment}`;
+                document.getElementById('comment-list').appendChild(li);
+                e.target.reset();
+            }
+        });
+    </script>
+</body>
+</html>

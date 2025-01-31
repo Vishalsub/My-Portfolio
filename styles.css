@@ -1,0 +1,298 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the body takes the full height */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    color: white; /* Default text color */
+    font-family: 'Montserrat', sans-serif;
+    background: black; /* Fallback background for cases when the video is not displayed */
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Video Background */
+#background-video {
+    position: fixed; /* Keep the video fixed in place */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    object-fit: cover; /* Cover the entire background */
+    z-index: -1; /* Place behind other content */
+}
+
+/* Overlay for better text visibility */
+.overlay {
+    position: fixed; /* Cover the entire screen */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Dark overlay with 70% opacity */
+    z-index: 0; /* Place it above the video */
+}
+
+/* The header */
+header {
+    text-align: center;
+    padding: 100px 20px;
+    position: relative; /* Ensure it appears above the video */
+    z-index: 1; /* Set higher z-index */
+}
+
+/* Style the name */
+h1 {
+    font-size: 4rem; /* Larger font size for emphasis */
+    color: white; /* White color for the name */
+    font-weight: bold; /* Make it bold */
+    margin: 0;
+    padding-bottom: 20px; /* Add some spacing below the name */
+}
+
+/* Style the typing effect text */
+p {
+    font-size: 2rem;
+    font-weight: bold; /* Make the subtitle bold */
+    color: white; /* White color for the text under name */
+    margin-top: 0;
+    margin-bottom: 30px; /* Add some space below */
+}
+
+/* Additional styles for the typed effect */
+.typed-text {
+    font-size: 2rem;
+    font-weight: bold;
+    color:  #00fff2; /* Green color for typing effect */
+    display: inline;
+}
+
+.cursor {
+    display: inline-block;
+    width: 3px;
+    background-color: #00ffcc; /* Green color for blinking cursor */
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Center and style the social icons */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Spacing between icons and text */
+}
+
+.social-icons a {
+    text-decoration: none; /* Remove link underlines */
+    border: none; /* Remove borders */
+}
+
+.social-icons img {
+    width: 50px; /* Increased icon size */
+    height: 50px; /* Maintain aspect ratio */
+    margin: 0 10px; /* Space between icons */
+    transition: transform 0.2s ease; /* Smooth transition for hover effect */
+}
+
+.social-icons img:hover {
+    transform: scale(1.1); /* Slightly increase icon size on hover */
+}
+
+/* Project link styles */
+.project-link-box {
+    background-color: rgba(255, 255, 255, 0.1); /* Light background */
+    border: 2px solid #fff; /* White border */
+    border-radius: 5px; /* Reduced border-radius for a less rounded effect */
+    padding: 10px; /* Reduced padding for smaller inner content area */
+    margin-top: 1rem; /* Reduced space above the project link */
+    text-align: center; /* Center the text */
+}
+
+.project-link {
+    display: inline-block; /* Make it a block-level element */
+    padding: 5px 10px; /* Reduced padding for smaller link box */
+    border: 2px solid #fff; /* White border */
+    border-radius: 3px; /* Smaller rounded corners */
+    background-color: transparent; /* Transparent background */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    color: #fff; /* White text color */
+    text-decoration: none; /* Remove underline */
+    font-size: 1.5rem;
+}
+
+.project-link:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Light background on hover */
+}
+
+.intro-message {
+    color: white; /* Set text color to white */
+    text-align: center; /* Center the text */
+    z-index: 1; /* Set higher z-index */
+}
+
+/* Make sure the content below header pushes footer down */
+.intro-message p {
+    color: white; /* Ensure all paragraph text is white */
+    font-size: 1.2rem; /* Maintain your desired font size */
+    margin-bottom: 1rem; /* Maintain your margin */
+    z-index: 1; /* Set higher z-index */
+}
+
+/* Ensure a minimum height to allow scrolling */
+.main-content {
+    flex: 1; /* Allow this section to grow */
+    padding: 20px; /* Add padding for content */
+        z-index: 1; /* Set higher z-index */
+}
+
+/* Footer Section */
+.footer {
+    margin-top: auto; /* Pushes footer to the bottom */
+    position: relative; /* Ensure it appears above the video */
+    z-index: 1; /* Set higher z-index */
+    color: white; /* Text color */
+    text-align: center; /* Center text */
+    padding: 10px 20px; /* Padding for space around content */
+}
+
+/* Style for Project and Achievement Cards */
+.project-gallery, .achievement-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Images in Cards */
+.project-image, .achievement-image {
+    width: 100%; /* Make the image fill the card's width */
+    height: 200px; /* Set a fixed height for consistency */
+    object-fit: cover; /* Ensure images maintain aspect ratio */
+    border-radius: 8px 8px 0 0; /* Rounded corners for the top of the card */
+    margin-bottom: 10px;
+}
+
+/* Project and Achievement Cards */
+.project-card, .achievement-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    overflow: hidden; /* Prevent content overflow */
+}
+
+.project-card:hover, .achievement-item:hover {
+    transform: scale(1.05);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+.project-card h2, .achievement-item h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #00fff2;
+}
+
+.project-card p, .achievement-item p {
+    font-size: 1rem;
+    color: #fff;
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: 2px solid #00fff2;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #00fff2;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.project-link:hover {
+    background-color: #00fff2;
+    color: #000;
+}
+
+/* new */
+
+.media-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.media-image {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 8px;
+}
+
+.media-video {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 8px;
+}
+
+#comments-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#comments-section li {
+    background-color: rgba(255, 255, 255, 0.1);
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.comment-submit {
+    background-color: #00fff2;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.comment-submit:hover {
+    background-color: #00cccc;
+}
+
+
+@media (max-width: 600px) {
+    #background-video {
+        /* Ensure the video is visible and plays on mobile */
+        display: block; /* Keep video on mobile */
+        autoplay: true; /* Enable autoplay */
+        loop: true; /* Enable looping */
+    }
+
+    body {
+        background-color: #000; /* Keep background black for mobile */
+    }
+
+    h1 {
+        font-size: 2.5rem; /* Smaller heading on mobile */
+    }
+
+    p, .typed-text {
+        font-size: 1.5rem; /* Smaller text on mobile */
+    }
+
+    .social-icons img {
+        width: 40px; /* Smaller icons on mobile */
+        height: 40px;
+    }
+}

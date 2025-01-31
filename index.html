@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vishal Subramanian</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"> <!-- Added Montserrat -->
+</head>
+
+<body>
+    <!-- Video Background -->
+    <video id="background-video" autoplay muted loop playsinline>
+        <source src="images/1.mp4" type="video/mp4"> 
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Overlay Div -->
+    <div class="overlay"></div>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Vishal Subramanian</h1>
+        <p>I'm <span class="typed-text" id="typed-text"></span><span class="cursor" id="cursor"></span></p>
+
+        <!-- Social Icons -->
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/vishalsubra/" target="_blank">
+                <img src="images/linkedin.png" alt="LinkedIn">
+            </a>
+            <a href="https://github.com/Vishalsub" target="_blank">
+                <img src="images/github.png" alt="GitHub">
+            </a>
+            <a href="mailto:vishalsubra127@gmail.com">
+                <img src="images/email.png" alt="Email">
+            </a>
+            <a href="files/Vishal_Subramanian_resume.pdf" download>
+                <img src="images/resume.png" alt="Resume">
+            </a>            
+        </div>
+
+        <!-- View Demo Projects Section -->
+        <p style="text-align: center; margin-top: 1rem;">
+            <a href="projects.html" class="project-link">CHECK OUT MY PROJECT DEMOS!</a>
+        </p>
+
+        <p style="text-align: center; margin-top: 1rem;">
+            <a href="achievement.html" class="project-link">CHECK OUT MY ACHIEVEMENTS!</a>
+        </p>
+    </header>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Intro Message -->
+        <div class="intro-message" style="text-align: center; color: white;">
+            <p style="font-size: 1.2rem; margin-top: 0.1rem; margin-bottom: 1.5rem;">
+            🌟 Greetings, Explorer of Innovation! 🌟
+            </p>
+            <p style="font-size: 0.9rem; margin-bottom: 0.2rem;">
+            🔗 Click on the icons to navigate my LinkedIn universe, dive into my GitHub projects, drop me a message, explore my qualifications, or experience my demos in action!
+            </p>
+            <p style="font-size: 0.9rem; margin-bottom: 0.2rem;">
+            Together, let’s shape the future of technology and create something extraordinary. I can’t wait to connect and collaborate with you! 🤝
+            </p>
+        </div>
+
+        <!-- Footer Section -->
+        <div class="footer">
+            <div class="location-section" style="text-align: center; margin-top: 1rem;">
+
+            <p style="font-size: 0.7rem; text-align: center; font-weight: italic;">
+                © 2025 Vishal Subramanian. All rights reserved.
+            </p>
+        </div>
+    </div>
+
+    <!-- JavaScript for Typing Effect -->
+    <script>
+        const textArray = ["a Roboticist", "an Mechatronics Engineer", "an Innovator", "a Tech Enthusiast"];
+        let currentTextIndex = 0;
+        let currentCharIndex = 0;
+        const typedTextElement = document.getElementById('typed-text');
+        const cursorElement = document.getElementById('cursor');
+
+        function typeText() {
+            if (currentCharIndex < textArray[currentTextIndex].length) {
+                typedTextElement.textContent += textArray[currentTextIndex].charAt(currentCharIndex);
+                currentCharIndex++;
+                setTimeout(typeText, 100);
+            } else {
+                setTimeout(eraseText, 2000); // Pause before erasing
+            }
+        }
+
+        function eraseText() {
+            if (currentCharIndex > 0) {
+                typedTextElement.textContent = textArray[currentTextIndex].substring(0, currentCharIndex - 1);
+                currentCharIndex--;
+                setTimeout(eraseText, 100);
+            } else {
+                currentTextIndex = (currentTextIndex + 1) % textArray.length;
+                setTimeout(typeText, 500); // Pause before typing the new text
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            setTimeout(typeText, 1000); // Start typing after a 1-second delay
+        });
+    </script>
+</body>
+</html>

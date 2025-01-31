@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Origami-Based Shape-Changing Robot</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+            background-color: #f8f9fa;
+        }
+
+        #background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: -1;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            color: white;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+        }
+
+        .main-content {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #0056b3;
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+
+        p, ul {
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .media-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .media-image, .media-video {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #comments {
+            margin-top: 30px;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        input, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        button {
+            background-color: #00cccc;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #00cccc;
+        }
+
+        #comment-list li {
+            margin-bottom: 10px;
+        }
+
+        .back-button {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .back-button a {
+            text-decoration: none;
+            color: white;
+            background-color: #00cccc;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        .back-button a:hover {
+            background-color: #00cccc;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #00cccc;
+            color: white;
+            position: relative;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Video Background -->
+    <!-- <video id="background-video" autoplay muted loop playsinline>
+        <source src="images/1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video> -->
+
+    <!-- Overlay -->
+    <div class="overlay"></div>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Origami-Based Shape-Changing Robot</h1>
+        <p>Aug 2024 - Nov 2024 | Associated with National University of Singapore</p>
+    </header>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Back to Projects Page -->
+        <div class="back-button">
+            <a href="projects.html">← Back to Projects Page</a>
+        </div>
+
+        <!-- Introduction -->
+<!-- Introduction -->
+    <section id="introduction">
+        <h2>Introduction</h2>
+        <p>
+            Problem Statement: In many environments, robots face challenges due to their rigid structure, limiting their ability to adapt to different tasks and confined spaces. For example, cleaning robots struggle to efficiently handle both large surfaces and tight corners. Similarly, robots in search-and-rescue missions may need to navigate both open areas and narrow spaces, which requires flexibility and adaptability.
+        </p>
+        <p>
+            Solution: The origami-based shape-changing robot is designed to tackle these challenges by offering a robot that can dynamically alter its shape. By expanding for large tasks and shrinking for confined spaces, this robot can easily transition between different tasks and environments. Using the **ROS 2 Humble Framework** for smooth trajectory planning and **deep reinforcement learning (TD3)** to optimize navigation, it can efficiently navigate various surfaces while maintaining high adaptability. The robot’s flexible design provides a practical solution for both large-scale operations and precision tasks, offering a perfect balance between versatility and efficiency.
+        </p>
+    </section>
+
+        <img src="projects/final.mp4" alt="Origami-Based Shape-Changing Robot" class="media-image">
+
+        <!-- Key Features -->
+        <section id="features">
+            <h2>Key Features</h2>
+            <ul>
+                <li>Origami-Based Shape Change: The robot can dynamically alter its shape to adapt to various environments.</li>
+                <li>ROS 2 Humble Framework: Used for smooth trajectory planning and surface-specific navigation.</li>
+                <li>Real-Time Motion Control: Achieved with the ROS 2 Control Plugin for precise movements.</li>
+                <li>TD3 Deep Reinforcement Learning: Enables optimal navigation strategies through machine learning.</li>
+            </ul>
+        </section>
+
+        <!-- Benefits -->
+        <section id="benefits">
+            <h2>Benefits</h2>
+            <ul>
+                <li>Maximized adaptability to various spaces and tasks.</li>
+                <li>Seamless autonomous operation with learning capabilities.</li>
+                <li>Innovative AI and robotics applications in autonomous navigation and flexibility.</li>
+            </ul>
+        </section>
+
+        <!-- Skills -->
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>ROS 2 Humble Framework</li>
+                <li>Python and C++ Programming</li>
+                <li>Origami-Based Design Principles</li>
+                <li>Deep Reinforcement Learning (TD3)</li>
+                <li>Motion Planning and Navigation Algorithms</li>
+                <li>Real-Time Control Systems</li>
+            </ul>
+        </section>
+
+        <!-- Media Section -->
+        <section id="media">
+            <h2>Media</h2>
+            <div class="media-content">
+                <video controls class="media-video">
+                    <source src="projects/Control .mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <!-- <video controls class="media-video">
+                    <source src="projects/TD3.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video> -->
+            </div>
+        </section>
+
+        <!-- Credits Section -->
+    <section id="credits">
+        <h2>Credits</h2>
+        <p>
+            A special thank you to all those who contributed to the development of this project:
+        </p>
+        <ul>
+            <li><strong>Fan Zirui</strong> - Designed the innovative origami-based shape-changing robot and provided key insights into its mechanical structure.</li>
+            <li><strong>Dr. Zhang Hongying</strong> - Provided expert guidance throughout the project, particularly in the areas of robotics design and development.</li>
+            <li><strong>National University of Singapore</strong> - Provided the platform and resources to conduct this research, facilitating a collaborative effort to push the boundaries of autonomous robotics.</li>
+            <li><strong>ROS 2 Community</strong> - Thanks to the open-source community for the development of the ROS 2 Humble Framework, which was integral to the robot’s motion planning and navigation.</li>
+        </ul>
+    </section>
+
+
+        <!-- Comment Section -->
+        <section id="comments">
+            <h2>Comments</h2>
+            <form id="comment-form">
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <textarea id="comment" name="comment" rows="5" placeholder="Write your comment here..." required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+            <ul id="comment-list">
+            </ul>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>© 2025 Vishal Subramanian. All rights reserved.</p>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        document.getElementById('comment-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value.trim();
+            const comment = document.getElementById('comment').value.trim();
+            if (name && comment) {
+                const li = document.createElement('li');
+                li.innerHTML = `<strong>${name}:</strong> ${comment}`;
+                document.getElementById('comment-list').appendChild(li);
+                e.target.reset();
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management Robot</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+            background-color: #f8f9fa;
+        }
+
+        #background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: -1;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            color: white;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+        }
+
+        .main-content {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #0056b3;
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+
+        p, ul {
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .media-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .media-image, .media-video {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #comments {
+            margin-top: 30px;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        input, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        button {
+            background-color: #00cccc;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #00cccc;
+        }
+
+        #comment-list li {
+            margin-bottom: 10px;
+        }
+
+        .back-button {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .back-button a {
+            text-decoration: none;
+            color: white;
+            background-color: #00cccc;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        .back-button a:hover {
+            background-color: #00cccc;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #00cccc;
+            color: white;
+            position: relative;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Video Background -->
+    <!-- <video id="background-video" autoplay muted loop playsinline>
+        <source src="images/1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video> -->
+
+    <!-- Overlay -->
+    <div class="overlay"></div>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Library Management Robot</h1>
+        <p>Jan 2023 - Apr 2023 | Associated with Sri Krishna College of Engineering and Technology</p>
+    </header>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Back to Projects Page -->
+        <div class="back-button">
+            <a href="projects.html">← Back to Projects Page</a>
+        </div>
+
+        <!-- Introduction -->
+        <section id="introduction">
+            <h2>Introduction</h2>
+            <p>
+                Students often struggle to find resources in large libraries, while faculty members face challenges in managing inventory and ensuring materials are properly shelved.
+            </p>
+            <p>
+                This project addresses these issues by developing a robot that can guide students and library faculty members through the library collection. Using the ROS 1 framework(Noetic), the robot features a humanoid face capable of recognizing facial expressions and mimicking emotions, enabling empathetic and personalized assistance.
+            </p>
+        </section>
+        <img src="projects/12.png" alt="Library Management Robot" class="media-image">
+
+        <!-- Key Features -->
+        <section id="features">
+            <h2>Key Features</h2>
+            <ul>
+                <li>Resource Recommendations: Helps students find relevant resources based on search queries.</li>
+                <li>Inventory Management: Assists faculty in restacking misplaced books.</li>
+                <li>Facial Recognition: Detects user frustration and offers emotional support.</li>
+            </ul>
+        </section>
+
+        <!-- Benefits -->
+        <section id="benefits">
+            <h2>Benefits</h2>
+            <ul>
+                <li>Saves students time and reduces stress.</li>
+                <li>Improves library workflow efficiency.</li>
+                <li>Showcases innovative AI applications in education.</li>
+            </ul>
+        </section>
+
+        <!-- Skills -->
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>ROS Framework</li>
+                <li>Python and CPP Programming</li>
+                <li>Facial Recognition and AI</li>
+                <li>Robotics Design and Development</li>
+                <li>Emotion Detection Algorithms</li>
+                <li>SLAM Algorithms</li>
+                <li>Embedded Programming</li>
+            </ul>
+        </section>
+
+        <!-- Media Section -->
+        <section id="media">
+            <h2>Media</h2>
+            <div class="media-content">
+                <img src="images/Project_1_pics.jpg" alt="Library Management Robot" class="media-image">
+                <video controls class="media-video">
+                    <source src="images/Project_1_demo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
+
+        <!-- Comment Section -->
+        <section id="comments">
+            <h2>Comments</h2>
+            <form id="comment-form">
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <textarea id="comment" name="comment" rows="5" placeholder="Write your comment here..." required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+            <ul id="comment-list">
+            </ul>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>© 2025 Vishal Subramanian. All rights reserved.</p>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        document.getElementById('comment-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value.trim();
+            const comment = document.getElementById('comment').value.trim();
+            if (name && comment) {
+                const li = document.createElement('li');
+                li.innerHTML = `<strong>${name}:</strong> ${comment}`;
+                document.getElementById('comment-list').appendChild(li);
+                e.target.reset();
+            }
+        });
+    </script>
+</body>
+</html>
